@@ -1,0 +1,48 @@
+Base: node
+
+
+create table departamento(
+codigo serial primary key,
+nome varchar(50));
+
+create table produto (
+codigo serial primary key,
+descricao varchar(50),
+imagem varchar(100),
+coddep int not null references departamento(codigo) on update cascade);
+
+insert into departamento(codigo, nome)values(1, 'Desenhos');
+insert into departamento(codigo, nome)values (2,'Dança');
+insert into departamento(codigo, nome)values (3,'Escrita');
+
+insert into produto(codigo,descricao,imagem,coddep) values(1, 'De: Daniel','fig1.jpg', 1);
+insert into produto(codigo,descricao,imagem,coddep) values(2, 'De: Endy','fig2.jpg', 1);
+insert into produto(codigo,descricao,imagem,coddep) values(3, 'De: Daniel','fig3.jpg', 1);
+insert into produto(codigo,descricao,imagem,coddep) values(4, 'De: Daniel','fig4.jpg', 1);
+insert into produto(codigo,descricao,imagem,coddep) values(5, 'De: Thainá','fig5.jpg', 1);
+insert into produto(codigo,descricao,imagem,coddep) values(6, 'De: Daniel','fig6.jpg', 1);
+insert into produto(codigo,descricao,imagem,coddep) values(7, 'De: Milena','fig7.jpg', 1);
+insert into produto(codigo,descricao,imagem,coddep) values(8, 'De: Milena','fig8.jpg', 1);
+insert into produto(codigo,descricao,imagem,coddep) values(9, 'De: Daniel','fig9.jpg', 1);
+insert into produto(codigo,descricao,imagem,coddep) values(10, 'De: Thainá','fig9.1.jpg', 1);
+insert into produto(codigo,descricao,imagem,coddep) values(11, 'De: Thainá','fig9.2.jpg', 1);
+insert into produto(codigo,descricao,imagem,coddep) values(12, 'De: Thainá','fig9.3.jpg', 1);
+insert into produto(codigo,descricao,imagem,coddep) values(13, 'De: Thainá','fig9.4.jpg', 1);
+insert into produto(codigo,descricao,imagem,coddep) values(14, 'De: Thainá','fig9.5.jpg', 1);
+insert into produto(codigo,descricao,imagem,coddep) values(15, 'De: Endy','fig9.6.jpg', 1);
+insert into produto(codigo,descricao,imagem,coddep) values(16, 'De: Endy','fig9.7.jpg', 1);
+insert into produto(codigo,descricao,imagem,coddep) values(17, 'De: Thainá','fig9.8.jpg', 1);
+insert into produto(codigo,descricao,imagem,coddep) values(18, 'De: Thainá','fig9.10.jpg', 1);
+
+
+insert into produto(codigo,descricao,imagem,coddep) values(19, 'Tainá','fig10.jpg', 2);
+insert into produto(codigo,descricao,imagem,coddep) values(20, 'Tainá','fig11.jpg', 2);
+
+
+
+insert into produto(codigo,descricao,imagem,coddep) values(21, 'De: Manuele','fig20.jpg', 3);
+insert into produto(codigo,descricao,imagem,coddep) values(22, 'De: Manuele','fig21.jpg', 3);
+insert into produto(codigo,descricao,imagem,coddep) values(23, 'De: Manuele','fig22.jpg', 3);
+insert into produto(codigo,descricao,imagem,coddep) values(24, 'De: Milena','fig23.jpg', 3);
+insert into produto(codigo,descricao,imagem,coddep) values(25, 'De: Ana Julia','fig24.jpg', 3);
+

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../../css/input.css" />
+
+
+
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tbody>
+            <tr>
+<%
+let cont = 0
+    for(i=0;i< tabela.rowCount;i++) {
+        cont ++
+%>
+<td>
+
+    <input type="text" name="txtCodigo" value="<%=tabela.rows[i].codigo %>" hidden /> 
+    <input type="text" name="txtDescricao" value="<%=tabela.rows[i].descricao %>"  /> </br>
+    <input type="text" name="txtImagem" value="<%=tabela.rows[i].imagem %>" hidden /> 
+    <img src="/imagens/<%= tabela.rows[i].imagem%>" width="300"/>
+    <h2><%tabela.rows[i].descricao%></h2>
+    
+</td>
+<%
+if((cont % 3)==0){
+    %>
+    </tr><tr>
+ <%
+}
+}
+%>
+      </tr>
+    </tbody>    
+</table>
+</body>
+</html>
